@@ -19,10 +19,15 @@ const getProjects = function (req, res){
 }
 
 const getProject = function (req, res){
-    let post = getPostById(req)
+    let post = getProjectById(req)
     if(post) return res.send(post);
     res.status(400);
     res.send(req.error);
+}
+
+const newProject = (req, res)=>{
+    console.log("I EXIST")
+    res.render("layouts/pages/new_project");
 }
 
 const makeProject = function (req, res){
@@ -64,6 +69,7 @@ const changeProject = function (req, res){
 module.exports = {
     getProjects, 
     getProject, 
+    newProject,
     makeProject,
     removeProject,
     changeProject

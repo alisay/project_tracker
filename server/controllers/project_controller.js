@@ -48,6 +48,7 @@ const getProject = function (req, res) {
 }
 
 const grabProject = function (req, res) {
+    
     let id = req.query.id;
     res.redirect(`/projects/${id}`);
 }

@@ -18,6 +18,10 @@ const getProjectById = function (id){
     return Project.findById(id);
 }
 
+const getProjectByNumber = function(number){
+    return 
+}
+
 const addProject = function (req){
     // let date = Date.now();
     return new Project(req.body);

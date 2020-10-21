@@ -28,9 +28,9 @@ const getProjects = function (req, res) {
 const getProject = function (req, res) {
     console.log("in get project----------------------------")
     const id = req.query.id
-    console.log("in get project----------------------------", id)
+    // console.log("in get project----------------------------", id)
     getProjectById(id).exec((err, project) => {
-        project.approvalDate = timeFormat(project.approvalDate)
+        // project.approvalDate = timeFormat(project.approvalDate)
         if (err) {
             res.status(404);
             return res.send("not found");
